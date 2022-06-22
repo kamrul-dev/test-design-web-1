@@ -19,7 +19,7 @@ const Post = ({ postContent }) => {
     console.log('post img', postImg);
 
     return (
-        <div className='p-4 bg-[#F1F1F1] rounded'>
+        <div className='p-4 bg-[#F1F1F1] rounded-lg'>
             <div className='flex justify-between'>
                 <div className='flex'>
                     <img src={profileImg} className="w-14 border-gray-600 border-2 rounded-full" alt="" />
@@ -33,7 +33,7 @@ const Post = ({ postContent }) => {
                 </div>
             </div>
             <div className='py-4'>
-                <img src={postImg} alt="" />
+                <img src={postImg} className="rounded-lg" alt="" />
                 <p className='p-3'>{post_details}</p>
             </div>
             <div className='flex justify-between px-12'>
