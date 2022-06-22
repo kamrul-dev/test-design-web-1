@@ -12,12 +12,11 @@ const Post = ({ postContent }) => {
 
     /*---------------Profile Photo Location + friend_profile_photo--------------*/
     const profileImg = `https://uviom-life.s3.amazonaws.com/images/personal/friend_profile_photo/${profile_images.friend_profile_photo}`;
-    console.log('prifle img', profileImg);
+
 
     /*--------------Post Image Location + content_name------------*/
     const postImg = `https://uviom-life.s3.amazonaws.com/images/content/post_images/${post_contents[0].content_name}`;
-    console.log('post img', postImg);
-
+ 
     return (
         <div className='p-4 bg-[#F1F1F1] rounded-lg'>
             <div className='flex justify-between'>
