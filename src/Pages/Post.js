@@ -9,9 +9,6 @@ import { FaShareSquare } from 'react-icons/fa';
 const Post = ({ postContent }) => {
     const { created_at, user, profile_images, post_contents, post_details, liked_posts_count, comments_count } = postContent;
 
-    console.log(post_contents[0]?.source);
-    console.log(post_contents[0]?.content_name);
-
 
     /*---------------Profile Photo Location + friend_profile_photo--------------*/
     const profileImg = `https://uviom-life.s3.amazonaws.com/images/personal/friend_profile_photo/${profile_images.friend_profile_photo}`;
@@ -28,7 +25,7 @@ const Post = ({ postContent }) => {
                     <img src={profileImg} className="w-14 border-gray-600 border-2 rounded-full" alt="" />
                     <div className='ml-4'>
                         <h4>{user.first_name} ({user.last_name})</h4>
-                        <h5>{created_at}1 hr ago</h5>
+                        <h5>{created_at}</h5>
                     </div>
                 </div>
                 <div className='cursor-pointer'>

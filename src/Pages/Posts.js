@@ -3,7 +3,6 @@ import Post from './Post';
 
 const Posts = () => {
     const [postContents, setPostContents] = useState([]);
-    console.log(postContents);
 
     useEffect(() => {
         const postData = async () => {
