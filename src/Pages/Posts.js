@@ -46,7 +46,6 @@ const Posts = () => {
                     <button className='mr-3 hover:text-blue-500'>{"<<"}Prev</button>
                     {
                         [...Array(pageCount).keys()].map((number, index) => <button
-                            onClick={() => setPage(number)}
                             key={index} className='btn w-6 rounded bg-slate-400 hover:bg-blue-100 mr-3'>
                             {number + 1}
                         </button>)

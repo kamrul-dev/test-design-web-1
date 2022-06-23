@@ -10,5 +10,7 @@
 * React.js library
 * tailwind css
 * react-icon
+* moment.js
+* react-infinite-scroll-component
 
 
