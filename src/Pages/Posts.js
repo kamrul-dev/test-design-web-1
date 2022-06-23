@@ -6,7 +6,7 @@ import Loading from './Loading';
 const Posts = () => {
     const [postContents, setPostContents] = useState([]);
     const [hasMore, sethasMore] = useState(true);
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useState(2);
 
     const [pageCount, setPageCount] = useState(4);
     // const [size, setSize] = useState(10);
@@ -23,7 +23,7 @@ const Posts = () => {
 
     const fethPosts = async () => {
         const res = await fetch(`https://backend.uviom.com/public/frontend_api/test-data?_page=${page}&per_page=7`)
-        console.log(res);
+        
         const data = await res.json();
         return data.data;
     }
