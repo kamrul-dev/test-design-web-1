@@ -4,10 +4,15 @@ import { BsThreeDots } from 'react-icons/bs';
 import { GrLike } from 'react-icons/gr';
 import { FaRegComments } from 'react-icons/fa';
 import { FaShareSquare } from 'react-icons/fa';
+import moment from 'moment';
 // import postImage from '../images/postimage.png'
 
 const Post = ({ postContent }) => {
     const { created_at, user, profile_images, post_contents, post_details, liked_posts_count, comments_count } = postContent;
+
+
+    /*------- convert date and time to human readable---------- */
+    const dateTimeAgo = moment(new Date(created_at)).fromNow();
 
 
     /*---------------Profile Photo Location + friend_profile_photo--------------*/
@@ -16,7 +21,7 @@ const Post = ({ postContent }) => {
 
     /*--------------Post Image Location + content_name------------*/
     const postImg = `https://uviom-life.s3.amazonaws.com/images/content/post_images/${post_contents[0].content_name}`;
- 
+
     return (
         <div className='p-4 bg-[#F1F1F1] rounded-lg'>
             <div className='flex justify-between'>
@@ -24,7 +29,7 @@ const Post = ({ postContent }) => {
                     <img src={profileImg} className="w-14 border-gray-600 border-2 rounded-full" alt="" />
                     <div className='ml-4'>
                         <h4>{user.first_name} ({user.last_name})</h4>
-                        <h5>{created_at}</h5>
+                        <h5>{dateTimeAgo}</h5>
                     </div>
                 </div>
                 <div className='cursor-pointer'>
